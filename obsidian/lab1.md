@@ -19,7 +19,28 @@ ___
 ## III.	ວົງຈອນແລະcode
 ![](../image/30.png) 
 ![](../image/31.png) 
-![](../image/32.png) 
+____
+~~~cpp
+// C++ code
+//
+void setup() {
+// put your setup code here, to run once:
+
+  pinMode(LED_BUILTIN, OUTPUT); // PIN 13
+  
+}
+
+void loop() {
+// put your main code here, to run repeatedly:
+	
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s) = 1 second
+  
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(1000); // Wait for 1000 millisecond(s) = 1 second
+  
+}
+~~~
 
 ## IV.	ຜົນຂອງການທົດລອງ
 ຜົນການທົດລອງການສາມາດສະຫລຸບໄດ້ວ່າ ການເຮັດວຽກຂອງດອກໄຟ LED ນັ້ນໄດ້ມີການສະແດງຜົນຕາມທີ່ເຮົາຕ້ອງ,ໂດຍມັນຈະມີການຮຸ້ງ-ດັບສະຫລັບກັນ 1 ວິນາທີ. ໂດຍຫລັງມັນຈະເຮັດວຽກແລ້ວຈະມີການວົນຊ້ຳ(loop)ໄປເລື້ອຍໆຈົນກສ່າເຮົາສັ່ງຈຸດການເຮັດວຽກມັນ.

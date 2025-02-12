@@ -21,7 +21,35 @@ ___
 ## III.	ວົງຈອນແລະcode
 ![](../image/33.png) 
 ![](../image/34.png) 
-![](../image/35.png) 
+___
+~~~cpp
+int buttonState = 0;
+
+void setup()
+{
+  pinMode(2, INPUT);
+  pinMode(LED_BUILTIN, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  // read the state of the pushbutton value
+  buttonState = digitalRead(2);
+  // check if pushbutton is pressed.  if it is, the
+  // buttonState is HIGH
+  if (buttonState == HIGH) {
+    // turn LED on
+    Serial.println("Button HIGH"); 
+    digitalWrite(LED_BUILTIN, HIGH);
+  } else {
+    // turn LED off
+    Serial.println("Button LOW"); 
+    digitalWrite(LED_BUILTIN, LOW);
+  }
+  delay(10); // Delay a little bit to improve simulation performance
+}
+~~~
 
 ## IV.	ຜົນຂອງການທົດລອງ
 ຜົນການທົດລອງການສາມາດສະຫລຸບໄດ້ວ່າ ການເຮັດວຽກຂອງດອກໄຟ LED ນັ້ນໄດ້ມີການສະແດງຜົນຕາມທີ່ເຮົາຕ້ອງ,ໂດຍມັນຈະມີການຮຸ້ງ-ດັບສະຫລັບກັນ 1 ວິນາທີ. ໂດຍຫລັງມັນຈະເຮັດວຽກແລ້ວຈະມີການວົນຊ້ຳ(loop)ໄປເລື້ອຍໆຈົນກສ່າເຮົາສັ່ງຈຸດການເຮັດວຽກມັນ.

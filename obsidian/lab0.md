@@ -23,7 +23,27 @@ Blink Arduino ເປັນໂປຣເຈັກເລີ່ມຕົ້ນຂອ
 ![](../image/28.png) 
 ![](../image/28_1.jpeg) 
 ___
-![](../image/29.png) 
+~~~cpp
+// C++ code
+//
+void setup() {
+// put your setup code here, to run once:
+
+  pinMode(LED_BUILTIN, OUTPUT); // PIN 13
+  
+}
+
+void loop() {
+// put your main code here, to run repeatedly:
+	
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s) = 1 second
+  
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(1000); // Wait for 1000 millisecond(s) = 1 second
+  
+}
+~~~
 
 
 ___

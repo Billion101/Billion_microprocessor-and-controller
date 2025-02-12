@@ -27,7 +27,23 @@ ___
 ## III.	ວົງຈອນແລະcode
 ![](../image/55.png) 
 ![](../image/56.png) 
-![](../image/57.png) 
+<!-- ![](../image/57.png)  -->
+~~~cpp
+// C++ code
+//
+void setup()
+{
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+}
+~~~
 ## IV.	ຜົນຂອງການທົດລອງ
 ຜົນການທົດລອງການສາມາດສະຫລຸບໄດ້ວ່າ: ໂດຍມັນເປັນວົງຈອນທີ່ຈະໃຊ້ Relay ໃຫ້ກັບດອກໄຟ LED 2 ດອກ ເມື່ອດອກໄຟ1ຮຸ້ງແລ້ວມັນຈະມີການ Relay ຈາກນັ້ນດອກໄຟດອກ2ກໍ່ຈະຮຸ້ງ ສ່ວນດອກທີ່1 ກໍຈະດັບລົງໄປ.
 [Go to Next Page](lab8.md)
